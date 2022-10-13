@@ -1,8 +1,6 @@
-﻿// Maze.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
-
-#include "pch.h"
+﻿#include "pch.h"
 #include <iostream>
+#include "ConsoleHelper.h"
 #include "Board.h"
 #include "Player.h"
 
@@ -11,7 +9,8 @@ Player player;
 
 int main()
 {
-	::srand(static_cast<unsigned int>(time(nullptr)));
+	::srand(static_cast<unsigned>(time(nullptr)));
+
 	board.Init(25, &player);
 	player.Init(&board);
 

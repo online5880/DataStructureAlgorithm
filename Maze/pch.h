@@ -1,9 +1,9 @@
 #pragma once
 
-#include <Windows.h>
+#include "Types.h"
+#include <windows.h>
 #include <iostream>
 #include <vector>
-#include "Types.h"
 using namespace std;
 
 struct Pos
@@ -18,18 +18,18 @@ struct Pos
 		return !(*this == other);
 	}
 
-	Pos operator*(Pos& other)
+	Pos operator+(Pos& other)
 	{
 		Pos ret;
 		ret.y = y + other.y;
 		ret.x = x + other.x;
-		return *this;
+		return ret;
 	}
 
 	Pos& operator+=(Pos& other)
 	{
-		x += other.x;
 		y += other.y;
+		x += other.x;
 		return *this;
 	}
 
