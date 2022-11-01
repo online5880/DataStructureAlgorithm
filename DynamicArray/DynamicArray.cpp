@@ -25,7 +25,7 @@ public:
 	{
 		if(_size == _capacity)
 		{
-			// 증성 작업
+			// 증설 작업
 			int newCapacity = static_cast<int>(_capacity * 1.5);
 			if(newCapacity == _capacity)
 			{
