@@ -83,6 +83,7 @@ public:
 
     T& front()
     {
+
         return _container.front();
     }
 
